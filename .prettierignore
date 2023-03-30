@@ -1,0 +1,4 @@
+dist
+postgres_data
+package-lock.json
+yarn.lock
