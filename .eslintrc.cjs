@@ -25,7 +25,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
-    'comma-dangle': ['error', 'always-multiline'],
+    'comma-dangle': ['error', 'only-multiline'],
     'no-unused-vars': 'warn',
   },
 }

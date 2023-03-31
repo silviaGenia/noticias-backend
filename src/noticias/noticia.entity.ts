@@ -1,4 +1,12 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
+import { Categoria } from 'src/categorias/categoria.entity'
+import { Departamento } from 'src/departamentos/departamento.entity'
+import {
+  Column,
+  Entity,
+  ManyToMany,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm'
 
 @Entity({ name: 'noticias' })
 export class Noticia {
@@ -22,4 +30,10 @@ export class Noticia {
 
   @Column({ default: false })
   banner: boolean
+
+  @ManyToOne(() => Categoria, categoria => categoria.noticias)
+  categoria: Categoria
+
+  @ManyToOne(() => Departamento, departamento => departamento.noticias)
+  departamento: Departamento
 }
